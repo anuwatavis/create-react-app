@@ -1,7 +1,4 @@
-FROM alpine as builder
-
-RUN apk add --update nodejs npm
-RUN apt-get update -qq && apt-get install -y build-essential nodejs
+FROM node:14.15.0-alpine as builder
 
 WORKDIR '/app'
 
